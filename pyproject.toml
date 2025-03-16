@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "find-audio"
+version = "0.1.0"
+description = "Locate an audio clip in a file"
+authors = ["dkujawski <dave.kujawski@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "find_audio" }]
+
+[tool.poetry.scripts]
+find-audio = "find_audio.main:main"
+transcribe = "find_audio.stt:main"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+torch = "^2.6.0"
+ffmpeg = "^1.4"
+sox = "^1.5.0"
+sentencepiece = "^0.2.0"
+torchaudio = "^2.6.0"
+numpy = "^2.2.3"
+youtube-dl = "^2021.12.17"
+speechrecognition = "^3.14.1"
+pydub = "^0.25.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
